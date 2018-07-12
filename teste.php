@@ -12,7 +12,7 @@
 //    $token = $crawler->filter('input')->eq(1)->extract('value')[0];
 //    $form = $crawler->selectLink('Esqueci minha senha')->form();
     $form = $crawler->filter('form')->form();
-    $crawler = $client->submit($form, array('LOGIN' => "20161035000349", 'SENHA' => 'arthurcvm', 'TIPO_USU' => '1'));
+    $crawler = $client->submit($form, array('LOGIN' => "loginhere", 'SENHA' => 'senhahere', 'TIPO_USU' => '1'));
     $crawler->filter('body')->each(function ($node) {
         print $node->text()."\n";
     });
